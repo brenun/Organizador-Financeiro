@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Dívidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organizador de Dívidas</h1>
+        <div id="carousel">
+            <div class="card" id="card1">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="card" id="card2">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" required>
+            </div>
+            <div class="card" id="card3">
+                <label for="valor">Valor Total (R$):</label>
+                <input type="number" id="valor" min="0" required>
+            </div>
+            <div class="card" id="card4">
+                <label for="parcelas">Total de Parcelas:</label>
+                <input type="number" id="parcelas" min="0" required>
+            </div>
+            <div class="card" id="card5">
+                <label for="parcelasPagas">Número de Parcelas Pagas:</label>
+                <input type="number" id="parcelasPagas" min="0" required>
+            </div>
+            <div class="card" id="card6">
+                <label for="valorParcela">Valor da Parcela (R$):</label>
+                <input type="number" id="valorParcela" min="0" required>
+                <button onclick="adicionarDivida()">Adicionar Dívida</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <button onclick="anteriorCard()">Anterior</button>
+            <button onclick="proximoCard(currentCard + 1)">Próximo</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
